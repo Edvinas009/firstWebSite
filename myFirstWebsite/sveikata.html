@@ -1,0 +1,506 @@
+<!--Sveikata-->
+<html>
+<head>
+<Meta charset=UTF-8/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="foto/clipart175380.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="myCss.css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+    defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<title> Mitybos planai </title>
+
+
+<meta name="description" content="Instead of going on a diet or doing a workout challenge, you'll have more long-term success if you view health and fitness as a lifestyle. Here's how.">
+<meta name="keywords" content="Sport, Health, fitness, healthy food, healthy recipes, sport program at home ">
+ <meta name="author"  content="Edvinas Tubelis" />
+
+</head>
+
+<body>
+
+
+
+<nav class="topnav" id="myTopnav">
+	<a href="My_site.html"><img class="img" title="Pagrindinis" id="pic" alt="Pagrindinis" src="foto/clipart175380.png" width="80" height="80"></a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+	<a class="txt" href="galerija.html"> Galerija </a>
+	<a class="txt" href="kontaktai.html"> Kontaktai </a>
+  <a><input type="submit" class="login"  value="Registracija" onclick="document.getElementById('id02').style.display='block'"></a>
+  <a><input type="submit" class="login" value="Prisijungti"  onclick="document.getElementById('id01').style.display='block'"></a>
+</nav>
+<script>
+function myFunction() {
+  let x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+const nav = document.querySelector('#myTopnav');
+let navTop = myTopnav.offsetTop;
+
+function fixedNav() {
+  if (window.scrollY >= navTop) {
+    myTopnav.classList.add('fixed');
+  } else {
+    myTopnav.classList.remove('fixed');
+  }
+}
+
+window.addEventListener('scroll', fixedNav);
+</script>
+
+<div id="mySidenav" class="sidenav">
+
+      <button onclick="padidinti_font()" class="dropdown-text">Padidinti teksta <i class="fas fa-search-plus"></i></button>
+      <button onclick="nakties_rezimas()" class="dropdown-text">Nakties režimas <i class="far fa-lightbulb"></i></button>
+</div>
+
+<script>
+function openNav() {
+  let e = document.getElementById("mySidenav");
+  if (e.style.width == '250px')
+  {
+      e.style.width = '0px';
+  }
+  else
+  {
+      e.style.width = '250px';
+  }
+}
+</script>
+<div class="mainas">
+ <span id="main" onclick="openNav()"><i class="fas fa-sliders-h"></i></span>
+</div>
+
+<script>
+function nakties_rezimas() {
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+    element.classList.toggle("dark-mode_h2");
+    element.classList.toggle("dark-mode_footer");
+ }
+function padidinti_font() {
+   let element = document.body;
+   element.classList.toggle("font-size");
+   element.classList.toggle("font-size_dieta");
+   element.classList.toggle("font-size_h2");
+}
+</script>
+
+
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php" method="post">
+
+    <div class="container">
+
+<h1>Prisijungimas</h1>
+
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<fieldset>
+  <label for="uname"><b>Jūsų vardas:</b></label>
+      <input type="text" name="uname" required>
+
+      <label for="psw"><b>Jūsų slaptažodis:</b></label>
+      <input type="password" name="psw" required>
+
+          <a href="https://www.facebook.com/" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Prisijungti su Facebook
+         </a>
+
+      <a href="https://accounts.google.com/signin/v2/identifier?hl=lt&continue=https%3A%2F%2Fwww.google.lt%2F&ec=GAlAAQ&flowName=GlifWebSignIn&flowEntry=AddSession" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Prisijungti su Google+
+        </a>
+</fieldset>
+</div>
+
+<fieldset>
+<input type="checkbox" checked="checked" name="remember"> Prisiminti mane
+
+      <button class="hvr-grow" type="submit">Prisijungti</button>
+
+  </fieldset>
+
+    </form>
+
+
+    </div>
+
+  </form>
+</div>
+
+<div id="id02" class="modal">
+
+<form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+        <h1>Registracija</h1>
+
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <fieldset>
+          <legend><span class="number">1</span>Jūsų informacija</legend>
+          <label for="name">Jūsų vardas:</label>
+          <input action="/action_page.php" method="get" type="text" id="name" name="user_name" required>
+
+          <label for="mail">Jūsų el.paštas:</label>
+          <input action="/action_page.php" method="get" type="email" id="mail" name="user_email" required>
+
+          <label for="password">Jūsų slaptažodis:</label>
+          <input action="/action_page.php" method="get" type="password" id="password" name="user_password" required>
+
+          <label>Jūsų amžius:</label>
+          <input action="/action_page.php" method="get" type="date"  name="amžius">
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="number">2</span>Jūsų profilis</legend>
+          <label for="bio">Papasakokite trumpai apie save:</label>
+          <textarea action="/action_page.php" method="get" id="bio" name="user_bio"></textarea>
+					<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+				  <input type="checkbox" checked="unchecked" name="remember" style="margin-bottom:15px"> Prisiminti mane
+        </fieldset>
+<div class="clearfix">
+        <button type="submit">Užsiregistruoti</button>
+      </form>
+</div>
+</div>
+</div>
+
+<script>
+window.addEventListener("click", function(event) {
+  // Get REFUSE modal
+  var modal = document.getElementById('id01');
+  // When the user clicks anywhere outside of the modal, close it
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+window.addEventListener("click", function(event) {
+  // Get CONFIRMATION modal
+  var modal = document.getElementById('id02');
+  // When the user clicks anywhere outside of the modal, close it
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+</script>
+
+<header>
+
+  <div class="citata">
+      <p>Geriausias patarimas sveikatai apsaugoti: </p>
+<p>nevalgyk, kai nenori, </p>
+<p>liaukis valgęs - kai dar nori. </p>
+
+</header>
+
+
+<article class="Dieta_viršus">
+
+<h2>SVORIO MAŽINIMAS</h2>
+
+<p>Nuosekliai laikytis treniruočių plano yra labai svarbu, norint suformuoti gerą figūrą, tačiau lygiai taip pat svarbu tinkamai maitintis.
+Atsikratyti riebalų jums bus gerokai sunkiau, jei valgysite netinkamai.</p>
+<aside>Vartojant daug krakmolingo maisto, tokio kaip makaronai, duona, ryžiai (ypač jei vartojate viską vienu metu),
+  kūnas gauna daugiau glikogeno ir energijos atsargų nei jam reikia.</aside>
+<p>Būtent todėl į pagalbą ateina ši 4 savaičių mitybos programa, kurią pateikia coachmag.co.uk.
+Garantuojame, kad sąžiningai laikydamiesi šio plano atsikratysite nereikalingų kilogramų (žinoma, riebalų sąskaita), išryškinsite liesąją raumenų masę.
+Taip, suvokiame, kad lengviau pasakyti nei padaryti. Net jei šį planą naudosite kaip pavyzdį apie tai, kokį maistą turėtumėte valgyti, tai vis tiek puikus svorio metimo būdas.</p>
+
+</article>
+<br>
+<article class="Dieta">
+<h2>Planas</h2>
+
+<b>Pirmadienis</b>
+<ul>
+<li><b>Pusryčiai:</b> 45 g avižų su 300 ml lieso pieno ir 1 arbatiniu šaukšteliu medaus; 200 ml obuolių sulčių.</li>
+<li><b>Užkandis:</b> 120 g neriebaus jogurto su mėlynėmis ir medumi.</li>
+<li><b>Pietūs:</b> Salotos su ant grotelių keptos vištienos krūtinėle ir pilno grūdo duona.</li>
+<li><b>Užkandis:</b> Kokteilis – 25 g pieno išrūgų proteino (baltymai), 80 g aviečių, 80 g mėlynių, 50 g gervuogių ir vanduo. Viską suplakite.</li>
+<li><b>Vakarienė:</b> 120 g tuno kepsnys su pakeptais brokoliais, grybais, žaliosiomis pupelėmis, sezamo sėklomis ir šiek tiek aliejaus; 70 g rudųjų ryžių.</li>
+<li><b>Užkandis:</b> 250 ml lieso pieno.</li>
+</ul>
+
+<p><b>Iš viso per dieną:</b> 1835 kcal, 136 g baltymų, 229 g angliavandenių, 33 g riebalų.</p>
+
+<b>Antradienis</b>
+
+<ul>
+<li><b>Pusryčiai:</b> Kokteilis – 25 g pieno išrūgų proteino, 300 ml lieso pieno, 100 g braškių ir bananas. Viską suplakite.</li>
+<li><b>Užkandis:</b> 120 g neriebaus jogurto, mėlynės ir medus.</li>
+<li><b>Pietūs:</b> Pilno grūdo duonos sumuštinis su tunu; 200 ml lieso pieno.</li>
+<li><b>Užkandis:</b> Riešutų mišinys, razinos ir spanguolės.</li>
+<li><b>Vakarienė:</b> Vištienos (100 g), šoninės ir avokado salotos.</li>
+<li><b>Užkandis:</b> 1 obuolys su 2 šaukštais riešutų sviesto.</li>
+</ul>
+
+<p><b>Iš viso per dieną:</b> 1802 kcal, 131 g baltymų, 219 g angliavandenių, 37 g riebalų.</b></p>
+
+<aside class="customer-logos">
+  <div class="slide"><img src="reklamos/sportgates-lauko-reklamos-kampanija-dizainas-addrama-virsutinis-1.png" height="200px"></div>
+  <div class="slide"><img src="reklamos/6000x3000-sabonis-arbuzas-73590040.jpg" height="200px"></div>
+  <div class="slide"><img src="reklamos/del-etikos-pazeidimu-svarstytos-keturios-lietuviskos-reklamos2.jpg" height="200px"></div>
+  <div class="slide"><img src="reklamos/klubo-forum-reklama-79233165.jpg" height="200px"></div>
+  <div class="slide"><img src="reklamos/Ignitis_grupe_color-01_0.jpg" height="200px"></div>
+  <div class="slide"><img src="reklamos/pic.jpg" height="200px"></div>
+</aside>
+
+<b>Trečiadienis</b>
+
+<ul>
+<li><b>Pusryčiai:</b> Kokteilis – 25 g pieno išrūgų proteino, 300 ml lieso pieno, 100 g braškių ir bananas. Viską suplakite.</li>
+<li><b>Užkandis: </b>90 g skumbrės ant pilno grūdo duonos skrebučio.</li>
+<li><b>Pietūs:</b> 1 obuolys; vištienos salotų sumuštinis su pilno grūdo duona.</li>
+<li><b>Užkandis:</b> 1 bananas.</li>
+<li><b>Vakarienė: </b>120 g jautienos kepsnio su špinatais ir 2 ant grotelių keptais pomidorais.</li>
+<li><b>Užkandis: </b>100 g neriebios varškės ir ananasas.</li>
+</ul>
+
+<p><b>Iš viso per dieną: </b>1821 kcal, 138 g baltymų, 222 g angliavandenių, 35 g riebalų.</b></p>
+
+<b>Ketvirtadienis</b>
+
+<ul>
+<li><b>Pusryčiai: </b>Plakta kiaušinienė iš 4 kiaušinių baltymų su 2 pilno grūdo duonos skrebučiais.</li>
+<li><b>Užkandis:</b> 1 neriebus jogurtas su mėlynėmis, sauja avižų ir medumi.</li>
+<li><b>Pietūs:</b> Kokteilis – 25 g pieno išrūgų proteino, 80 g aviečių, 80 g mėlynių, 50 g gervuogių ir vanduo. Viską suplakite; 30 g braziliškų riešutų.</li>
+<li><b>Užkandis:</b> 100 g neriebios varškės ir ananasas.</li>
+<li><b>Vakarienė: </b>tuno salotos (100 g tuno, salotų lapai, slyviniai pomidorai, raudonoji paprika, 4 šviežios bulvės).</li>
+<li><b>Užkandis:</b> 250 ml lieso pieno.</li>
+</ul>
+
+<p><b>Iš viso per dieną:</b> 1835 kcal, 136 g baltymų, 229 g angliavandenių, 33 g riebalų.</b></p>
+
+<b>Penktadienis</b>
+
+<ul>
+<li><b>Pusryčiai:</b> 45 g avižų su 300 ml lieso pieno ir 1 šaukšteliu medaus.</li>
+<li><b>Užkandis:</b> 10 ridikėlių su balzamiko užpilu.</li>
+<li><b>Pietūs:</b> 1 skardinė tuno su burokėliais; 1 porcija neriebaus jogurto.</li>
+<li><b>Užkandis:</b> Kokteilis – 25 g pieno išrūgų proteino, 80 g aviečių, 80 g mėlynių ir 50 g gervuogių bei vanduo. Viską suplakite.</li>
+<li><b>Vakarienė:</b> 120 g barbekiu vištienos su paprikomis ir 70 g rudųjų ryžių.</li>
+<li><b>Užkandis: </b>100 g varškės; vynuogės.</li>
+</ul>
+
+<p><b>Iš viso per dieną:</b> 1808 kcal, 133 g baltymų, 219 g angliavandenių, 34 g riebalų.</b></p>
+
+<b>Šeštadienis</b>
+
+<ul>
+<li><b>Pusryčiai: </b>Omletas iš 2 kiaušinių ir sūrio.</li>
+<li><b>Užkandis:</b> Kokteilis – 25 g proteino, 1 obuolys, 50 g mėlynių, 50 g gervuogių, 1 bananas ir vanduo. Viską suplakite.</li>
+<li><b>Pietūs:</b> 90 g sardinių ir vienas pilno grūdo duonos skrebutis.</li>
+<li><b>Užkandis: </b>150 g žalių morkų su humusu.</li>
+<li><b>Vakarienė: </b>100 g ant grotelių keptos lašišos su žaliosiosmis pupelėmis, šparagais ir 70 g rudųjų ryžių.</li>
+<li><b>Užkandis: </b>200 ml lieso pieno.</li>
+</ul>
+
+<p><b>Iš viso per dieną:</b> 1822 kcal, 135 g baltymų, 221 g angliavandenių, 36 g riebalų.</b></p>
+
+<b>Sekmadienis</b>
+
+<ul>
+<li><b>Pusryčiai: </b>Plakta kiaušinienė iš 4 kiaušinių batymų su 2 pilno grūdo duonos skrebučiais; 1 greipfrutas.</li>
+<li><b>Užkandis:</b> Kokteilis – 25 g proteino, 300 ml lieso pieno, 50 g mėlynių, 50 g gervuogių ir bananas. Viską suplakite.</li>
+<li><b>Pietūs:</b> Tuno sumuštinis su pilno grūdo duona; 1 kriaušė.</li>
+<li><b>Užkandis: </b>Batonėlis su riešutais ir razinomis.</li>
+<li><b>Vakarienė: </b>120 g jautienos kepsnio, 1 maža bulvė su odele, špinatai ir 1 ant grotelių keptas pomidoras.</li>
+<li><b>Užkandis:</b> 1 obuolys ir 2 šaukštai natūralaus riešutų sviesto.</li>
+</ul>
+
+<p><b>Iš viso per dieną:</b> 1840 kcal, 140 g baltymų, 228 g angliavandenių, 39 g riebalų.</b></p>
+
+</article>
+
+<section>
+<br>
+<div class="lentele">
+		<h2> Šešių savaičių sporto programa </h2>
+<table>
+  <tr>
+        <th>Dienos</th>
+				<th>Pirma diena</th>
+				<th>Antra diena</th>
+				<th>Trečia diena</th>
+				<th>Ketvirta diena</th>
+				<th>Penkta diena</th>
+	</tr>
+	<tr>
+				<td><b>Pirma savaitė</b></td>
+				<td>(Eiti 5 min, bėgti 10min) x2</td>
+				<td>Poilsis</td>
+        <td>(Eiti 3min, bėgti 12min) x2</td>
+        <td>Poilsis</td>
+        <td>(Eiti 5min, bėgti 10min) x2</td>
+	</tr>
+	<tr>
+				<td><b>Antra savaitė</b></td>
+				<td>(Eiti 3min, bėgti 12min) x2</td>
+				<td>(Eiti 3min, bėgti 12min) </td>
+				<td>(Eiti 3min, bėgti 12min) x2</td>
+        <td>Poilsis<br>
+				<td>(Eiti 5min, bėgti 10min) x2</td>
+	</tr>
+	<tr>
+					<td><b>Trečia savaitė</b></td>
+					<td>(Bėgti 5min, eiti 2min) x4</td>
+					<td>(Bėgti 7min, eiti 3min) x3</td>
+					<td>(Bėgti 12min, eiti 3min) x2</td>
+					<td>(Bėgti 7min, eiti 3min) x3</td>
+					<td>(Bėgti 13min, eiti 2min) x2</td>
+	</tr>
+	<tr>
+				<td><b>Ketvirta savaitė</b></td>
+				<td>(Bėgti 5min, eiti 1min) x5</td>
+				<td>(Bėgti 8min, eiti 2min) x3</td>
+				<td>(Bėgti 13min, eiti 2min) x2</td>
+				<td>(Bėgti 5min, eiti 1min) x5</td>
+				<td>(Bėgti 13min, eiti 2min) x2</td>
+	</tr>
+	<tr>
+				<td><b>Penkta savaitė</b></td>
+				<td>(Bėgti 5min, eiti 1min) x5</td>
+				<td>Bėgti 20min</td>
+				<td>(Bėgti 15min, eiti 2min) x5</td>
+				<td>(Bėgti 5min, eiti 1min) x3</td>
+				<td>Bėgti 20min</td>
+	</tr>
+	<tr>
+				<td><b>Šešta savaitė</b></td>
+				<td>(Bėgti 5min, eiti 1min) x5</td>
+				<td>Bėgti 25min</td>
+				<td>(Bėgti 5min, eiti 1min) x5</td>
+				<td>(Bėgti 10min, eiti 1min) x3</td>
+        <td>Bėgti 30min</td>
+	</tr>
+</table>
+
+</div>
+</section>
+
+<script>
+$(document).ready(function(){
+			$('.customer-logos').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 2100,
+				arrows: false,
+				dots: false,
+					pauseOnHover: false,
+					responsive: [{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 3
+					}
+				}, {
+					breakpoint: 520,
+					settings: {
+						slidesToShow: 2
+					}
+				}]
+			});
+		});
+</script>
+
+
+<footer>
+<section>
+<div class="row_grid">
+  <div id="column_footer">
+
+<h3> Apie mus </h3>
+<p> Health and Fitness </p>
+
+<p>info@healthandfitness.lt</p>
+
+
+<p> Gera fizinė parengtis ir užsigrūdinimas yra svarbūs žmogaus sveikatai, todėl šiame puslapije mes parodysime paprastus budus, kaip užtikrinti savo gerą sveikatą.
+</p>
+
+</div>
+
+
+
+  <div id="column_footer3">
+<h3> Sekite mus </h3>
+
+<a href="https://www.facebook.com/" class="footer_icon">
+<i class="fa fa-facebook fa-fw"></i></a>
+
+<a href="https://accounts.google.com/signin/v2/identifier?hl=lt&continue=https%3A%2F%2Fwww.google.lt%2F&ec=GAlAAQ&flowName=GlifWebSignIn&flowEntry=AddSession" class="footer_icon"><i class="fa fa-google fa-fw">
+</i></a>
+
+<a href="https://twitter.com/home" class="footer_icon">
+<i class="fab fa-twitter"></i></a>
+
+<h3> Mūsų adresas </h3>
+
+<p>J. Jasinskio g. 15, Vilnius 01111</p>
+
+<div id="map"></div>
+
+  </div>
+</div>
+</section>
+
+<hr>
+<address>
+   <p>2020&copy; Edvinas Tubelis</p>
+</address>
+</footer>
+
+<script>
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 54.68879343345807, lng: 25.261483524761644 },
+    zoom: 15,
+  });
+}
+</script>
+
+<button onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-circle-up"></i></button>
+
+<script>
+
+let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>

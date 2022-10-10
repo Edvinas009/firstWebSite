@@ -1,0 +1,364 @@
+<!--Sportas-->
+<html>
+<head>
+<Meta charset=UTF-8/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="foto/clipart175380.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="myCss.css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+    defer
+  ></script>
+
+<title> Pratimai ir kaip juos atlikti </title>
+
+
+<meta name="description" content="Instead of going on a diet or doing a workout challenge, you'll have more long-term success if you view health and fitness as a lifestyle. Here's how.">
+<meta name="keywords" content="Sport, Health, fitness, workout ">
+ <meta name="author"  content="Edvinas Tubelis" />
+
+<style>
+
+</style>
+</head>
+
+<body>
+
+<nav class="topnav" id="myTopnav">
+	<a href="My_site.html"><img class="img" title="Pagrindinis" id="pic" alt="Pagrindinis" src="foto/clipart175380.png" width="80" height="80"></a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+	<a class="txt" href="galerija.html"> Galerija </a>
+	<a class="txt" href="kontaktai.html"> Kontaktai </a>
+  <a><input type="submit" class="login"  value="Registracija" onclick="document.getElementById('id02').style.display='block'"></a>
+  <a><input type="submit" class="login" value="Prisijungti"  onclick="document.getElementById('id01').style.display='block'"></a>
+</nav>
+<script>
+function myFunction() {
+  let x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+const nav = document.querySelector('#myTopnav');
+let navTop = myTopnav.offsetTop;
+
+function fixedNav() {
+  if (window.scrollY >= navTop) {
+    myTopnav.classList.add('fixed');
+  } else {
+    myTopnav.classList.remove('fixed');
+  }
+}
+
+window.addEventListener('scroll', fixedNav);
+</script>
+<div id="mySidenav" class="sidenav">
+
+      <button onclick="padidinti_font()" class="dropdown-text">Padidinti teksta <i class="fas fa-search-plus"></i></button>
+      <button onclick="nakties_rezimas()" class="dropdown-text">Nakties režimas <i class="far fa-lightbulb"></i></button>
+</div>
+<script>
+function openNav() {
+  let e = document.getElementById("mySidenav");
+  if (e.style.width == '250px')
+  {
+      e.style.width = '0px';
+  }
+  else
+  {
+      e.style.width = '250px';
+  }
+}
+</script>
+<div class="mainas">
+ <span id="main" onclick="openNav()"><i class="fas fa-sliders-h"></i></span>
+</div>
+
+<script>
+
+function nakties_rezimas() {
+   let element = document.body;
+   element.classList.toggle("dark-mode");
+   element.classList.toggle("dark-mode_h2");
+}
+function padidinti_font() {
+   let element = document.body;
+   element.classList.toggle("font-size");
+}
+</script>
+
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php" method="post">
+
+    <div class="container">
+
+<h1>Prisijungimas</h1>
+
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<fieldset>
+  <label for="uname"><b>Jūsų vardas:</b></label>
+      <input type="text" name="uname" required>
+
+      <label for="psw"><b>Jūsų slaptažodis:</b></label>
+      <input type="password" name="psw" required>
+
+          <a href="https://www.facebook.com/" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Prisijungti su Facebook
+         </a>
+
+      <a href="https://accounts.google.com/signin/v2/identifier?hl=lt&continue=https%3A%2F%2Fwww.google.lt%2F&ec=GAlAAQ&flowName=GlifWebSignIn&flowEntry=AddSession" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Prisijungti su Google+
+        </a>
+</fieldset>
+</div>
+
+<fieldset>
+<input type="checkbox" checked="checked" name="remember"> Prisiminti mane
+
+      <button class="hvr-grow" type="submit">Prisijungti</button>
+
+  </fieldset>
+
+    </form>
+
+
+    </div>
+
+  </form>
+</div>
+
+
+<div id="id02" class="modal">
+
+<form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+        <h1>Registracija</h1>
+
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <fieldset>
+          <legend><span class="number">1</span>Jūsų informacija</legend>
+          <label for="name">Jūsų vardas:</label>
+          <input action="/action_page.php" method="get" type="text" id="name" name="user_name" required>
+
+          <label for="mail">Jūsų el.paštas:</label>
+          <input action="/action_page.php" method="get" type="email" id="mail" name="user_email" required>
+
+          <label for="password">Jūsų slaptažodis:</label>
+          <input action="/action_page.php" method="get" type="password" id="password" name="user_password" required>
+
+          <label>Jūsų amžius:</label>
+          <input action="/action_page.php" method="get" type="date"  name="amžius">
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="number">2</span>Jūsų profilis</legend>
+          <label for="bio">Papasakokite trumpai apie save:</label>
+          <textarea action="/action_page.php" method="get" id="bio" name="user_bio"></textarea>
+					<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+				  <input type="checkbox" checked="unchecked" name="remember" style="margin-bottom:15px"> Prisiminti mane
+<div class="clearfix">
+        <button class="hvr-grow" type="submit">Užsiregistruoti</button>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+
+<script>
+window.addEventListener("click", function(event) {
+  // Get REFUSE modal
+  var modal = document.getElementById('id01');
+  // When the user clicks anywhere outside of the modal, close it
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+window.addEventListener("click", function(event) {
+  // Get CONFIRMATION modal
+  var modal = document.getElementById('id02');
+  // When the user clicks anywhere outside of the modal, close it
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+</script>
+<header>
+
+    <div class="citata">
+        <p> Pratimai namuose, </p>
+<p>kurie padės tau pasiekti tikslą</p>
+</div>
+</header>
+
+<div class="viso_filmai">
+<hr>
+<h2 style="text-align: center"> Pratimai, kurie padeda padidinti pečius namuose. </h2>
+<div class="row_filmai">
+
+<iframe class="li_iframe" width="420" height="345" src="https://www.youtube.com/embed/ccLoSTz0a_I">
+</iframe>
+
+<ul class="li_iframe2">
+<li>Pratimai:</li>
+<li>Pike Push-Ups: 4 sets</li>
+<li>Bodyweight Lateral Raises: 4 sets</li>
+<li>Rear Delt Row (Sheets OR Doorway): 3 sets</li>
+<li>Rear Delt Fly (Sheets OR Lying Holds): 3 sets</li>
+</ul>
+
+</div>
+
+<br>
+<h2 style="text-align: center"> Pratimai, kurie padeda padidinti krūtinės raumenis namuose.</h2>
+<div class="row_filmai1">
+
+<iframe class="li_iframe" width="420" height="345" src="https://www.youtube.com/embed/EHR3Rl26-4A">
+</iframe>
+
+<ul class="li_iframe2">
+<li>Pratimai:</li>
+<li>Close Grip Push-Ups: 3-4 sets</li>
+<li>Decline Close Grip Push-Ups OR Wide Reverse Grip Push-Ups: 3-4 sets</li>
+<li>Dip Push-Ups: 3-4 sets</li>
+<li>Inner Chest Push-Ups: 2-3 sets</li>
+<li>Sliding Chest Flies OR Bed Sheet Flies: 2-3 sets</li>
+</ul>
+
+</div>
+<br>
+<h2 style="text-align: center"> Pratimai, kurie padeda padidinti kojų raumenis.</h2>
+<div class="row_filmai2">
+
+
+<iframe class="li_iframe" width="460" height="345" src="https://www.youtube.com/embed/Xg9B6pqHUQE">
+</iframe>
+
+<ul class="li_iframe2">
+<li>Pratimai:</li>
+<li>Back Squats OR Front Squats: 3-4 sets of 6-10 reps</li>
+<li>Hip Thrusts: 3-4 sets of 12-15 reps</li>
+<li>Split Squats (2 sets Bulgarian, 2 sets contralateral): 4 sets of 8-12 reps (each side)</li>
+<li>Glute Ham Raise (or Bosu Ball alternative): 3-4 sets of 10-15 reps</li>
+<li>Standing Single Leg Calf Raise: 2-4 sets of 6-10 reps</li>
+<li>Seated Calf Raise: 2-4 sets of 10-15 reps</li>
+</ul>
+
+</div>
+<br>
+<h2 style="text-align: center">Pratimai, kurie padeda padidinti nugaros raumenis namuose. </h2>
+
+<div class="row_filmai3">
+
+<iframe class="li_iframe" width="420" height="345" src="https://www.youtube.com/embed/_z_k8p36Fek">
+</iframe>
+
+<ul class="li_iframe2">
+<li>Pratimai:</li>
+<li>Bodyweight Lat Pulldowns: 3 sets</li>
+<li>Bodyweight Inverted Row: 3 sets</li>
+<li>Straight Arm Pulldown: 3 sets</li>
+<li>Bed Sheet Face Pulls: 3 sets</li>
+<li>Prone Arm Circles: 3 sets</li>
+</ul>
+
+</div>
+</div>
+
+<footer>
+
+<section>
+<div class="row_grid">
+  <div id="column_footer">
+
+<h3> Apie mus </h3>
+<p> Health and Fitness </p>
+
+<p>info@healthandfitness.lt</p>
+
+
+<p> Gera fizinė parengtis ir užsigrūdinimas yra svarbūs žmogaus sveikatai, todėl šiame puslapije mes parodysime paprastus budus, kaip užtikrinti savo gerą sveikatą.
+</p>
+
+</div>
+
+
+
+  <div id="column_footer3">
+<h3> Sekite mus </h3>
+
+<a href="https://www.facebook.com/" class="footer_icon">
+<i class="fa fa-facebook fa-fw"></i></a>
+
+<a href="https://accounts.google.com/signin/v2/identifier?hl=lt&continue=https%3A%2F%2Fwww.google.lt%2F&ec=GAlAAQ&flowName=GlifWebSignIn&flowEntry=AddSession" class="footer_icon"><i class="fa fa-google fa-fw">
+</i></a>
+
+<a href="https://twitter.com/home" class="footer_icon">
+<i class="fab fa-twitter"></i></a>
+
+<h3> Mūsų adresas </h3>
+
+<p>J. Jasinskio g. 15, Vilnius 01111</p>
+
+<div id="map"></div>
+
+  </div>
+</div>
+</section>
+
+<hr>
+<address>
+   <p>2020&copy; Edvinas Tubelis</p>
+</address>
+</footer>
+
+<script>
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 54.68879343345807, lng: 25.261483524761644 },
+    zoom: 15,
+  });
+}
+</script>
+
+
+<button onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-circle-up"></i></button>
+<script>
+
+let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>

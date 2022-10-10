@@ -1,0 +1,402 @@
+<!--Galerija-->
+<html>
+<head>
+<Meta charset=UTF-8/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="foto/clipart175380.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="myCss.css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+    defer
+  ></script>
+
+<title> Galerija </title>
+
+
+<meta name="description" content="Instead of going on a diet or doing a workout challenge, you'll have more long-term success if you view health and fitness as a lifestyle. Here's how.">
+<meta name="keywords" content="Sport, Health, fitness, healthy food, healthy recipes, sport program at home, foto ">
+ <meta name="author"  content="Edvinas Tubelis" />
+
+<style>
+
+</style>
+</head>
+
+<body>
+
+
+
+<nav class="topnav" id="myTopnav">
+	<a href="My_site.html"><img class="img" title="Pagrindinis" id="pic" alt="Pagrindinis" src="foto/clipart175380.png" width="80" height="80"></a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <i class="fa fa-bars"></i>
+	<a class="txt" href="galerija.html"> Galerija </a>
+	<a class="txt" href="kontaktai.html"> Kontaktai </a>
+  <a><input type="submit" class="login"  value="Registracija" onclick="document.getElementById('id02').style.display='block'"></a>
+  <a><input type="submit" class="login" value="Prisijungti"  onclick="document.getElementById('id01').style.display='block'"></a>
+</nav>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script>
+const nav = document.querySelector('#myTopnav');
+let navTop = myTopnav.offsetTop;
+
+function fixedNav() {
+  if (window.scrollY >= navTop) {
+    myTopnav.classList.add('fixed');
+  } else {
+    myTopnav.classList.remove('fixed');
+  }
+}
+
+window.addEventListener('scroll', fixedNav);
+</script>
+
+<script>
+function myFunction() {
+  let x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+
+<div id="mySidenav" class="sidenav">
+
+      <button onclick="padidinti_font()" class="dropdown-text">Padidinti teksta <i class="fas fa-search-plus"></i></button>
+      <button onclick="nakties_rezimas()" class="dropdown-text">Nakties režimas <i class="far fa-lightbulb"></i></button>
+</div>
+<script>
+function openNav() {
+  let e = document.getElementById("mySidenav");
+  if (e.style.width == '250px')
+  {
+      e.style.width = '0px';
+  }
+  else
+  {
+      e.style.width = '250px';
+  }
+}
+</script>
+<div class="mainas">
+ <span id="main" onclick="openNav()"><i class="fas fa-sliders-h"></i></span>
+</div>
+
+<script>
+
+function nakties_rezimas() {
+    let element = document.body;
+    element.classList.toggle("dark-mode_kontaktai");
+    element.classList.toggle("dark-mode_footer");
+ }
+function padidinti_font() {
+   let element = document.body;
+   element.classList.toggle("font-size");
+}
+</script>
+
+
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php" method="post">
+
+    <div class="container">
+
+<h1>Prisijungimas</h1>
+
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<fieldset>
+  <label for="uname"><b>Jūsų vardas:</b></label>
+      <input type="text" name="uname" required>
+
+      <label for="psw"><b>Jūsų slaptažodis:</b></label>
+      <input type="password" name="psw" required>
+
+          <a href="https://www.facebook.com/" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Prisijungti su Facebook
+         </a>
+
+      <a href="https://accounts.google.com/signin/v2/identifier?hl=lt&continue=https%3A%2F%2Fwww.google.lt%2F&ec=GAlAAQ&flowName=GlifWebSignIn&flowEntry=AddSession" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Prisijungti su Google+
+        </a>
+</fieldset>
+</div>
+
+<fieldset>
+<input type="checkbox" checked="checked" name="remember"> Prisiminti mane
+
+      <button class="hvr-grow" type="submit">Prisijungti</button>
+
+  </fieldset>
+
+    </form>
+
+
+    </div>
+
+  </form>
+</div>
+
+
+<div id="id02" class="modal">
+
+<form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+        <h1>Registracija</h1>
+
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <fieldset>
+          <legend><span class="number">1</span>Jūsų informacija</legend>
+          <label for="name">Jūsų vardas:</label>
+          <input action="/action_page.php" method="get" type="text" id="name" name="user_name" required>
+
+          <label for="mail">Jūsų el.paštas:</label>
+          <input action="/action_page.php" method="get" type="email" id="mail" name="user_email" required>
+
+          <label for="password">Jūsų slaptažodis:</label>
+          <input action="/action_page.php" method="get" type="password" id="password" name="user_password" required>
+
+          <label>Jūsų amžius:</label>
+          <input action="/action_page.php" method="get" type="date"  name="amžius">
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="number">2</span>Jūsų profilis</legend>
+          <label for="bio">Papasakokite trumpai apie save:</label>
+          <textarea action="/action_page.php" method="get" id="bio" name="user_bio"></textarea>
+					<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+				  <input type="checkbox" checked="unchecked" name="remember" style="margin-bottom:15px"> Prisiminti mane
+<div class="clearfix">
+        <button class="hvr-grow" type="submit">Užsiregistruoti</button>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+
+<script>
+window.addEventListener("click", function(event) {
+  // Get REFUSE modal
+  var modal = document.getElementById('id01');
+  // When the user clicks anywhere outside of the modal, close it
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+window.addEventListener("click", function(event) {
+  // Get CONFIRMATION modal
+  var modal = document.getElementById('id02');
+  // When the user clicks anywhere outside of the modal, close it
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+</script>
+
+<header>
+
+  <div class="galerija">
+  <p> Motyvacines nuotraukos, kurios gali tau padėti pasiekti tikslą.</p>
+</div>
+</header>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 6</div>
+  <img src="foto/athletic-man-woman-with-dumbbells_155003-11801.jpg" alt="Vyras sportuoja" width="900" height="480">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="foto/close-up-kettlebells-with-woman-exercise-workout-gym-fitness-breaking-relax-after-sport_10307-971.jpg" alt="Moteris ilsisis" width="900" height="480">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="foto/health-fitness-tips-weight.jpg" alt="Vyras sportuoja" width="900" height="480">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="foto/young-fitness-man-studio_7502-5008.jpg" alt="Vyras sportuoja" width="900" height="480">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="foto/sport-training-fitness-lifestyle-people-concept-young-woman-with-personal-trainer-flexing-back-abdominal-muscles-bench-gym_96727-213.jpg" alt="Vyras ir moteris sportuoja" width="900" height="480">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="foto/46df9a65b78acac4ccaa7808df64213a.jpg" alt="Vyras sportuoja" width="900" height="480">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)"><i class="fas fa-angle-double-left"></i></a>
+<a class="next" onclick="plusSlides(1)"><i class="fas fa-angle-double-right"></i></a>
+
+</div>
+<br>
+
+<div class="row">
+    <div class="column">
+      <img class="demo cursor" src="foto/athletic-man-woman-with-dumbbells_155003-11801.jpg" width="150" height="100" onclick="currentSlide(1)" alt="Vyras sportuoja">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto/close-up-kettlebells-with-woman-exercise-workout-gym-fitness-breaking-relax-after-sport_10307-971.jpg" width="150" height="100" onclick="currentSlide(2)" alt="Moteris ilsisis">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto/health-fitness-tips-weight.jpg" width="150" height="100" onclick="currentSlide(3)" alt="Vyras sportuoja">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto/young-fitness-man-studio_7502-5008.jpg" width="150" height="100" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto/sport-training-fitness-lifestyle-people-concept-young-woman-with-personal-trainer-flexing-back-abdominal-muscles-bench-gym_96727-213.jpg" width="150" height="100" onclick="currentSlide(5)" alt="Vyras ir moteris sportuoja">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="foto/46df9a65b78acac4ccaa7808df64213a.jpg" width="150" height="100" onclick="currentSlide(6)" alt="Vyras sportuoja">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+<footer>
+<section>
+<div class="row_grid">
+  <div id="column_footer">
+
+<h3> Apie mus </h3>
+<p> Health and Fitness </p>
+
+<p>info@healthandfitness.lt</p>
+
+
+<p> Gera fizinė parengtis ir užsigrūdinimas yra svarbūs žmogaus sveikatai, todėl šiame puslapije mes parodysime paprastus budus, kaip užtikrinti savo gerą sveikatą.
+</p>
+
+</div>
+
+
+
+  <div id="column_footer3">
+<h3> Sekite mus </h3>
+
+<a href="https://www.facebook.com/" class="footer_icon">
+<i class="fa fa-facebook fa-fw"></i></a>
+
+<a href="https://accounts.google.com/signin/v2/identifier?hl=lt&continue=https%3A%2F%2Fwww.google.lt%2F&ec=GAlAAQ&flowName=GlifWebSignIn&flowEntry=AddSession" class="footer_icon"><i class="fa fa-google fa-fw">
+</i></a>
+
+<a href="https://twitter.com/home" class="footer_icon">
+<i class="fab fa-twitter"></i></a>
+
+<h3> Mūsų adresas </h3>
+
+<p>J. Jasinskio g. 15, Vilnius 01111</p>
+
+<div id="map"></div>
+
+  </div>
+</div>
+</section>
+
+<hr>
+<address>
+   <p>2020&copy; Edvinas Tubelis</p>
+</address>
+</footer>
+
+<script>
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 54.68879343345807, lng: 25.261483524761644 },
+    zoom: 15,
+  });
+}
+</script>
+
+
+<button onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-circle-up"></i></button>
+<script>
+
+let mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
